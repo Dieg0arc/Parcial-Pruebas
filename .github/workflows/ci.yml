@@ -15,9 +15,9 @@ jobs:
         ports:
           - 27017:27017
         options: >-
-          --health-cmd="mongosh --eval 'db.runCommand({ ping: 1 })'" 
-          --health-interval=10s 
-          --health-timeout=5s 
+          --health-cmd="mongosh --eval 'db.runCommand({ ping: 1 })'"
+          --health-interval=10s
+          --health-timeout=5s
           --health-retries=5
 
     defaults:
@@ -43,9 +43,6 @@ jobs:
         env:
           MONGO_URI: mongodb://localhost:27017/product-db-test
         run: npm test
-
-      - name: Performance test (basic)
-        run: echo "Simulación básica de performance completada"
 
       - name: Success message
         if: success()
