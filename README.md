@@ -55,7 +55,11 @@ Para ejecutar:
 python -m locust
 ```
 
+![Locust](img/Locust.png)
+
 Luego acceder a http://localhost:8089
+
+![Locust-Test](img/Locust-Test.png)
 
 Requisitos
 
