@@ -9,6 +9,10 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend-crud
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,4 +36,4 @@ jobs:
 
       - name: Success message
         if: success()
-        run: echo "✅ Todas las pruebas se ejecutaron correctamente."
+        run: echo "Todas las pruebas se ejecutaron correctamente."
