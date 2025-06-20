@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Gestión de Productos</h1>
+
+    <section>
+        <h2>Agregar Producto</h2>
+        <form id="addProductForm">
+            <input type="text" placeholder="Nombre" id="name" required />
+            <input type="number" placeholder="Precio" id="price" required />
+            <input type="number" placeholder="Stock" id="stock" required />
+            <input type="text" placeholder="Categoría" id="category" required />
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Filtrar por categoría</h2>
+        <input type="text" id="categoryFilter" placeholder="Escribe una categoría" />
+        <button onclick="loadProducts()">Filtrar</button>
+    </section>
+
+    <section>
+        <h2>Lista de Productos</h2>
+        <ul id="productList"></ul>
+    </section>
+
+    <section>
+        <h2>Actualizar Stock</h2>
+        <form id="stockForm">
+            <input type="text" placeholder="ID de producto" id="stockId" required />
+            <input type="number" placeholder="Cantidad" id="stockAmount" required />
+            <select id="stockAction">
+                <option value="in">Entrada</option>
+                <option value="out">Salida</option>
+            </select>
+            <button type="submit">Actualizar stock</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Productos con stock bajo (&lt; 10)</h2>
+        <button onclick="loadLowStock()">Ver productos</button>
+        <ul id="lowStockList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
