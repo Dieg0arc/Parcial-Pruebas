@@ -4,7 +4,7 @@ const app = require('../index');
 const Product = require('../models/Product');
 
 beforeAll(async () => {
-  await mongoose.connect('mongodb://localhost:27017/product-db-test');
+await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/product-db-test');
 });
 
 afterAll(async () => {
