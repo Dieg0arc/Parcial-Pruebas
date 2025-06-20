@@ -37,7 +37,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint src --no-warnings
+        run: node_modules/.bin/eslint src --no-warnings
 
       - name: Run tests
         env:
